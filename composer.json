@@ -1,0 +1,22 @@
+{
+    "name": "guilh/blog-guilherme3s.dev",
+    "autoload": {
+        "psr-4": {
+            "Guilh\\BlogGuilherme3sDev\\": "source/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guilherme Soares Sousa Silva",
+            "email": "guilherme.sousa009@hotmail.com"
+        }
+    ],
+    "require": {
+        "sculpin/sculpin": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "sculpin/sculpin-theme-composer-plugin": true
+        }
+    }
+}

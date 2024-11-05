@@ -1,0 +1,5 @@
+site:
+  title: "Meu Blog"
+  description: "Blog sobre programação e tecnologia"
+
+theme: "default"
