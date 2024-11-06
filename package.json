@@ -1,0 +1,28 @@
+{
+  "name": "blog-guilherme3s.dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/GuilhermeSoares009/blog-guilherme3s.dev.git",
+  "author": "Guilherme Soares Sousa Silva <guilherme.sousa009@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@justinribeiro/lite-youtube": "^1.5.0",
+    "@symfony/webpack-encore": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "gh-pages": "^6.2.0",
+    "highlight.js": "^11.10.0",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^16.0.3",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "dev": "encore dev",
+    "deploy": "echo 'guilherme3s.dev' > output_prod/CNAME && gh-pages -d output_prod -b main -r git@github.com:GuilhermeSoares009/guilhermesoares009.github.io.git"
+  },
+  "devDependencies": {
+    "postcss-loader": "^8.1.0"
+  }
+}
