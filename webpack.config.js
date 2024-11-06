@@ -1,16 +1,18 @@
-const Encore = require('@symfony/webpack-encore');
+var Encore = require('@symfony/webpack-encore');
 
 Encore
-    .setOutputPath('public/build/')
+    .setOutputPath('source/build/')
     .setPublicPath('/build')
-    .addEntry('app', './assets/js/app.js')
-    .enableSassLoader()
-    .enablePostCssLoader()
+    .copyFiles({
+        from: './source/assets/img'
+    })
+    .addEntry('app', './source/assets/js/app.js')
+    .addStyleEntry('index', './source/assets/css/index.scss')
+    .addStyleEntry('post', './source/assets/css/post.scss')
+    .disableSingleRuntimeChunk()
+    .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
-    .enableVersioning(Encore.isProduction())
-
-    // Adicione esta linha para habilitar o uso de um único chunk de runtime
-    .enableSingleRuntimeChunk()
-;
+    .enableVersioning(false)
+    .enableSassLoader();
 
 module.exports = Encore.getWebpackConfig();
