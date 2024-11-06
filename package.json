@@ -23,7 +23,8 @@
   },
   "scripts": {
     "deploy": "echo 'guilhermesoares009.github.io' > public/build/CNAME && gh-pages -d public/build -b main -r git@github.com:GuilhermeSoares009/guilhermesoares009.github.io.git",
-    "dev": "encore dev"
+    "dev": "encore dev",
+    "build": "encore production"
   },
   "devDependencies": {
     "postcss-loader": "^8.1.0"
